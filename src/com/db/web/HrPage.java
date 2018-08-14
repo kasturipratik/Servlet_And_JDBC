@@ -1,4 +1,4 @@
-package com.example;
+package com.db.web;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -14,22 +14,17 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet("/HrPage")
 public class HrPage extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-       
-  
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
-		out.println("<HTML>");
-		out.println("<body> "
-				+ "<h2>Works</h2>"
-				+ "</body>"
-				+ "</html>");
+		out.println("<html>");
+		out.println("<body bgcolor=yellow text=red>");
+		out.println("<h1>Welcome to hr home page </h1>");
+		out.println("</body>");
+		out.println("</html>");
 	}
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
+	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);
