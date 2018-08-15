@@ -37,6 +37,7 @@ public class LoginServlet extends HttpServlet {
 		
 		}
 		else if(employee != null) {
+			request.setAttribute("user", employee);
 			RequestDispatcher rd = request.getRequestDispatcher("EmpPage");
 			rd.forward(request, response);
 		

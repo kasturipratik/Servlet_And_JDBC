@@ -3,6 +3,7 @@ package com.db.web;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -18,9 +19,12 @@ public class HrPage extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
-		out.println("<html>");
-		out.println("<body bgcolor=yellow text=red>");
-		out.println("<h1>Welcome to hr home page </h1>");
+		RequestDispatcher rd = request.getRequestDispatcher("base.html");
+		rd.include(request, response);
+		out.println("<div class='jumbotron' align='center'>");
+		out.println("<h1 class='p-3'>Welcome to hr home page </h1>");
+		out.println("<a href='DisplayPage' class='btn btn-lg btn-success'>Display All the employee</a>");
+		out.println("</div>");
 		out.println("</body>");
 		out.println("</html>");
 	}
