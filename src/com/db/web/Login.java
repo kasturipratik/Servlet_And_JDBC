@@ -1,5 +1,5 @@
 package com.db.web;
-import com.db.dao.*;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -15,26 +15,18 @@ import com.db.dto.Employee;
 /**
  * Servlet implementation class HrPage
  */
-@WebServlet("/EmpPage")
-public class EmpPage extends HttpServlet {
+@WebServlet("/Login")
+public class Login extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
 		
-		EmployeeDAO employeeDAO = new EmployeeDAO();
-		
-		Employee employee = (Employee) request.getAttribute("user");
-		
 		RequestDispatcher rd = request.getRequestDispatcher("base.html");
-		
 		rd.include(request, response);
-		out.println("<h1 class='text-center jumbotron p-5'>Welcome "+ employee.getEmpName() +" to your home page </h1>");
-		out.println("</div>");
-		//script to run the navigation bar
-		out.println(employeeDAO.scriptString());
-		out.println("</body>");
-		out.println("</html>");
+		
+		rd = request.getRequestDispatcher("Login.html");
+		rd.include(request, response);
 	}
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

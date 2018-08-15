@@ -7,10 +7,20 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import com.db.dto.Employee;
-import com.sun.xml.internal.bind.v2.schemagen.xmlschema.List;
 
+/**
+ * 
+ * @author prati
+ *
+ */
 public class EmployeeDAO {
 
+	/**
+	 * Returns the information about the user after passing the username and password in the login form
+	 * @param userName
+	 * @param password
+	 * @return
+	 */
 	public Employee getEmployee(String userName, String password) {
 		
 		Connection con=null;
@@ -52,6 +62,12 @@ public class EmployeeDAO {
 		return null;
 		
 	}
+	
+	/**
+	 * Returns all the list of employee in the database
+	 * @param list
+	 * @return
+	 */
 	public ArrayList<Employee> displayAll(ArrayList<Employee> list){
 		Connection connection = null;
 		PreparedStatement ps = null;;
@@ -67,6 +83,7 @@ public class EmployeeDAO {
 				//list the detail about the employee
 				int count =0;
 				while(rs.next()) {
+					
 				Employee employee = new Employee();
 				employee.setEmpId(rs.getInt(1));
 				employee.setEmpName(rs.getString(2));
@@ -92,5 +109,15 @@ public class EmployeeDAO {
 			}
 		return null;
 
+	}
+	/**
+	 * Bootstrap script for the  navigation bar 
+	 * @return
+	 */
+	public String scriptString() {
+		
+		return " <script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\"></script>\r\n" + 
+				"<script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js\" integrity=\"sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49\" crossorigin=\"anonymous\"></script>\r\n" + 
+				"<script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js\" integrity=\"sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy\" crossorigin=\"anonymous\"></script>";
 	}
 }

@@ -29,7 +29,7 @@ public class LoginServlet extends HttpServlet {
 		
 		Employee employee = eDao.getEmployee(userName, password);
 		
-		out.print("<html>");
+	
 		if(userName.equals("hr") && password.equals("hr")) {
 			// calling another servlet
 			RequestDispatcher rd = request.getRequestDispatcher("HrPage");
@@ -43,11 +43,14 @@ public class LoginServlet extends HttpServlet {
 		
 		}
 		else {
-			out.println("<body bgcolor=yellow text=red>");
-			out.println("<h2 class='text-center'>Invalid Credentials </h2>");
-			RequestDispatcher rd = request.getRequestDispatcher("Login.html");
+			RequestDispatcher rd = request.getRequestDispatcher("base.html");
 			rd.include(request, response);
-			out.println("</body>");
+			out.println("<div class=\"alert alert-warning\" role=\"alert\" align=\"center\">\r\n" + 
+					"  Invalid Entry" + 
+					"</div>");
+			rd = request.getRequestDispatcher("Login.html");
+			rd.include(request, response);
+			
 		}
 		
 	}

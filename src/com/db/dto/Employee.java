@@ -6,13 +6,14 @@ public class Employee {
  private String userName;
  private String password;
  private double salary;
+ static int count = 106;
 public Employee() {
 	super();
 	// TODO Auto-generated constructor stub
 }
-public Employee(int empId, String empName, String userName, String password, double salary) {
+public Employee( String empName, String userName, String password, double salary) {
 	super();
-	this.empId = empId;
+	this.empId = count++;
 	this.empName = empName;
 	this.userName = userName;
 	this.password = password;

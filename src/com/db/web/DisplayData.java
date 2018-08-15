@@ -25,11 +25,18 @@ public class DisplayData extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
+		
 		EmployeeDAO employeeDAO = new EmployeeDAO();
 		ArrayList<Employee> list = new ArrayList<>();
+		
 		employeeDAO.displayAll(list);
-		RequestDispatcher rd = request.getRequestDispatcher("DisplayData.html");
+		
+		RequestDispatcher rd = request.getRequestDispatcher("base.html");
 		rd.include(request, response);
+		
+		rd = request.getRequestDispatcher("DisplayData.html");
+		rd.include(request, response);
+		
 		for(Employee a:list)
 		{ 
 			out.println("<tr>");
@@ -44,6 +51,8 @@ public class DisplayData extends HttpServlet {
 		out.println("</tbody>");
 		out.println("</table>");
 		out.println("</div>");
+		out.println("</div>");
+		out.println(employeeDAO.scriptString());
 		out.println("</body>");
 		out.println("</html>");
 		

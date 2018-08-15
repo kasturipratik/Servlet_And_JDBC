@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+
+<div class="container">
+<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+	  <a class="navbar-brand" href="index.html">Business Application</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarText">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="Login">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="signup.html">Sign Up</a>
+      </li>
+    </ul>
+   
+  </div>
+</nav>
+<h2 class="text-center p-4 mt-4">Employee Sign up Form</h2>
+	<div class="row ">
+	
+		<div class="col-sm-0 col-md-3">
+		</div>
+		<div class="col-sm-12 col-md-6">
+			<form action="Signup" method="post">
+			     <label>Name</label>
+			    <input type="text" name="fName" class="form-control" placeholder="Full Name" required/>
+			    <label>Salary</label>
+			    <input type="number" name ="salary"  step="0.01" class="form-control" placeholder="Salary" required/>
+			    <label>User Name</label>
+			    <input type="text" name="userName" class="form-control" placeholder="Username" required/>
+			    <label>Password</label>
+			    <input type="password" name="password" class="form-control" placeholder="password" required/>
+			    <div align="center">
+			        <input type="submit"  value="Sign Up" class="btn btn-lg btn-warning mt-3"/>
+			    </div>
+  
+			</form>
+		</div>
+		<div class="col-sm-0 col-md-3">
+		</div>
+	</div>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
