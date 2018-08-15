@@ -10,6 +10,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.db.dao.EmployeeDAO;
 import com.db.dto.Employee;
@@ -37,7 +38,8 @@ public class LoginServlet extends HttpServlet {
 		
 		}
 		else if(employee != null) {
-			request.setAttribute("user", employee);
+			HttpSession session = request.getSession();
+			session.setAttribute("user", employee);
 			RequestDispatcher rd = request.getRequestDispatcher("EmpPage");
 			rd.forward(request, response);
 		
