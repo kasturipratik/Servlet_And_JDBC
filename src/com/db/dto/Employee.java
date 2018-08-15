@@ -1,12 +1,20 @@
 package com.db.dto;
 
+/**
+ * Employee object for the database
+ * @author prati
+ *
+ */
 public class Employee {
+	
  private int empId;
  private String empName;
  private String userName;
  private String password;
  private double salary;
  static int count = 106;
+ 
+ 
 public Employee() {
 	super();
 	// TODO Auto-generated constructor stub

@@ -17,7 +17,7 @@ import com.db.MyConnection;
 import com.db.dto.Employee;
 
 /**
- * Servlet implementation class HrPage
+ * Servlet implementation class Signup to retrieve and store the data from the form to the database
  */
 @WebServlet("/Signup")
 public class Signup extends HttpServlet {

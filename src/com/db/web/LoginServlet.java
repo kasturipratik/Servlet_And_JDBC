@@ -15,7 +15,11 @@ import javax.servlet.http.HttpSession;
 import com.db.dao.EmployeeDAO;
 import com.db.dto.Employee;
 
-
+/**
+ * Class implementing and validating the login from the database and starting the session upon successful user info
+ * @author prati
+ *
+ */
 @WebServlet("/LoginServlet")
 public class LoginServlet extends HttpServlet {
 

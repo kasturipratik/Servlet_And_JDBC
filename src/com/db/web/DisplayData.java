@@ -17,11 +17,14 @@ import com.db.dto.Employee;
 
 
 /**
- * Servlet implementation class HrPage
+ * Servlet implementation class Display all the data from the databse
  */
 @WebServlet("/DisplayPage")
 public class DisplayData extends HttpServlet {
 
+	/**
+	 * method to display the data form the table
+	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();

@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import com.db.dto.Employee;
 
 /**
- * 
+ * Connection to the database and retrieve and insert data to the database
  * @author prati
  *
  */

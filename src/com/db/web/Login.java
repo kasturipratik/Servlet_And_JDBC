@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.db.dto.Employee;
 
 /**
- * Servlet implementation class HrPage
+ * Servlet implementation class Login 
  */
 @WebServlet("/Login")
 public class Login extends HttpServlet {

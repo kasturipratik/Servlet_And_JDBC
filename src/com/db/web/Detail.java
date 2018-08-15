@@ -17,7 +17,7 @@ import javax.sound.midi.Soundbank;
 import com.db.dto.Employee;
 
 /**
- * Servlet implementation class HrPage
+ * Servlet implementation class Detail to display the profile details of the user
  */
 @WebServlet("/Detail")
 public class Detail extends HttpServlet {

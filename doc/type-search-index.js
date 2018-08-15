@@ -1,1 +1,0 @@
-typeSearchIndex = [{"p":"com.db.web","l":"LoginServlet"}]

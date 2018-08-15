@@ -15,11 +15,14 @@ import com.db.dto.Employee;
 import com.mysql.cj.Session;
 
 /**
- * Servlet implementation class HrPage
+ * Servlet implementation class EmpPage to display the user who has log in
  */
 @WebServlet("/EmpPage")
 public class EmpPage extends HttpServlet {
 
+	/**
+	 * method to display the user info on the page
+	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
